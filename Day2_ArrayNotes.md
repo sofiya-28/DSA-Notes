@@ -1,0 +1,98 @@
+# ARRAY-The Memmory Box
+What will we learn?
+In this chapter , we will understand:
+* what is an Array?
+* Why do we need Array?
+* Array Index!
+* Array length!
+* Accessing Elements!
+* Traversing an Array!
+
+# -->A PROBLEM BEFORE ARRAY<--
+Imagine you want to store marks of 5 students.
+* WITHOUT ARRAY
+Java:
+int marks1 =85;
+int marks2 =90;
+int marks3 =78;
+int marks4 =95;
+int marks5 =87;
+
+looks fine.
+but what if there are 1000 students?
+Creating 1000 variable is not practical.
+
+# Meet Array
+Collection of same/similar  type of data store in a one veriable.
+An Array is a container that store multiple value of the same type.
+Java:
+ >   int [] marks={ 85,90,78,95,87};
+Now one variable store many values.
+
+# Real Life Example!
+Think of an Array as a school bag.
+    [book1][book2][book3][book4]
+Each space store one item.
+Similarly:
+[85][90][78][95][87]
+Each position store one value.
+
+# Array index
+Every element has a position.
+
+* Array: 85 90 78 95 87 
+* Value: 0  1  2  3  4 
+
+> Important Rule 
+* Array index always start from 0.
+* last index of (Length-1).
+
+# Creating an Array
+* method 1
+ >          int[]arr = {20, 30, 40 ,50};
+* method 2
+ >          int[]arr = new int[4];
+output:
+ >          [0][0][0][0]
+      java automatically fills integer array with 0.
+
+# Accessing Array Elements
+using Java:
+>          int[] marks={10,70,50,68,40};
+>          System.out.println(marks[2]);// what is 2 , it is a array index 
+>          System.out.println(marks[4]);
+>          System.out.println(marks[0]);//0 is always starting index
+
+OUTPUT:
+>      50
+>      40
+>      10
+
+# Length of Array
+>          System.out.println(marks.length);
+OUTPUT:
+>      5
+
+# Traversing an Array
+Traversing means visiting every element one by one .
+Java:
+>          int[]arr={20,50,40,30,10};
+>          for(int i=0; i<=arr.length;i++){
+>              System.out.println(arr[i]);
+           }
+
+OUTPUT:
+>      20
+>      50
+>      40
+>      30
+>      10
+
+# why are Arrays Important?
+Array are the foundation of DSA.
+Many problem are based on Arrays:
+* Searching
+* Sorting
+* Finding Largest
+* Finding Smallest Element
+* Sum of Element

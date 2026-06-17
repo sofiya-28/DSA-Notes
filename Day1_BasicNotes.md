@@ -1,4 +1,4 @@
---> INTRODUCTION TO DSA <--
+# --> INTRODUCTION TO DSA <--
 
 What is DSA ?
 DSA=  Data Structures + Algorithms.
@@ -58,7 +58,7 @@ Answer: 50
 * JAVA
 java is a programming language.
 Example:
-#    System.out.println("HelloWorld!");
+      System.out.println("HelloWorld!");
 * DSA
 DSA is a way of solving problems.
 we used java to implement DSA
@@ -68,6 +68,9 @@ so:
 
 # KEY POINT 
 DSA = DSA stand for data Structure and Algorithms.
+
 What is DSA == A way to organize and store data .
+
 What is Algorithm== A step-by-step method to solve problem.
+
 Is java and DSA tha same== No, java is a language, and DSA is a problem solving.
