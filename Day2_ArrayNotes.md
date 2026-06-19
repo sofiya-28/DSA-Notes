@@ -22,12 +22,18 @@ looks fine.
 but what if there are 1000 students?
 Creating 1000 variable is not practical.
 
-# Meet Array
+# Array
 Collection of same/similar  type of data store in a one veriable.
 An Array is a container that store multiple value of the same type.
+Array is a mutable becouse array changed the value of after declaration.
 Java:
  >   int [] marks={ 85,90,78,95,87};
 Now one variable store many values.
+* >NOTE < without array hume har value ke liye alag se variable banana padta tha  par ab hum        array ka use kar ke ek he varible me sab value ko store kar sakte hai >
+
+# why we need array ?
+lets Suppose class ke 100 student ke marks store karne h to ye without array ye data store karna muskil h pr array ka use kar ke hum ye easily manage kar sakte h.
+>    int[]arr= new int[100];
 
 # Real Life Example!
 Think of an Array as a school bag.
@@ -37,11 +43,19 @@ Similarly:
 [85][90][78][95][87]
 Each position store one value.
 
-# Array index
+# Characterstics of Array
+*  Store same type of data.
+*  fixed size.
+*  Index Start from 0.
+*  fast access using Index.
+
+# Array index & Memory reprsentation.
 Every element has a position.
 
 * Array: 85 90 78 95 87 
 * Value: 0  1  2  3  4 
+* > NOTE< Array elements memory me continous (contiguous) locatio par store hote hain.>
+
 
 > Important Rule 
 * Array index always start from 0.
@@ -54,8 +68,8 @@ Every element has a position.
  >          int[]arr = new int[4];
 output:
  >          [0][0][0][0]
-      java automatically fills integer array with 0.
-
+      java automatically fills integer array with 0.(Default value of int 0)
+      
 # Accessing Array Elements
 using Java:
 >          int[] marks={10,70,50,68,40};
@@ -72,6 +86,14 @@ OUTPUT:
 >          System.out.println(marks.length);
 OUTPUT:
 >      5
+# Updating Element 
+>      marks[2]= 100;
+OUTPUT:   
+>      10
+>      100
+>      50
+>      68
+>      40
 
 # Traversing an Array
 Traversing means visiting every element one by one .
@@ -87,6 +109,21 @@ OUTPUT:
 >      40
 >      30
 >      10
+
+# Taking  input
+>      Scanner sc=new Scanner(System.in);
+>      int[]arr =new int[5];
+>      for(int i=0;i<arr.length;i++){
+>      arr[i]=sc.nextInt();
+>      }
+#  Time Complexity
+* operation              Complexity
+* Access                 O(1)
+* Update                 O(1)
+* Search                 O(n)
+* Traversal              O(n)
+
+>NOTE < Why access is O(1)  : Because array store elements continously and index directly points to memory location >
 
 # why are Arrays Important?
 Array are the foundation of DSA.
