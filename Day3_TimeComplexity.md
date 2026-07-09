@@ -254,22 +254,20 @@ Right:     A good algorithm is determined by its Time Complexity, not by compute
 ✔ Running Time ≠ Time Complexity.
 
 #  Summary
-
 - Time Complexity measures how an algorithm grows as input size increases.
 - It is independent of hardware.
 - It helps compare algorithms fairly.
 - Input size is represented by **n**.
 - Algorithms are compared mathematically, not by stopwatch.
+# (Part-2)
 
----
-
-# (Part-2) Big O Notation & Types of Time Complexity
+# Part-2 Big O Notation & Types of Time Complexity
 
 In this part, we will learn:
-✅ What is Big O Notation?
-✅ Why Big O is used?
-✅ Types of Time Complexity
-✅ Best, Average and Worst Case
+* What is Big O Notation?
+* Why Big O is used?
+* Types of Time Complexity
+* Best, Average and Worst Case
 
 #  What is Big O Notation?
 
@@ -304,7 +302,6 @@ because it performs fewer operations.
 Big O helps us compare algorithms.
 
 #  Real-Life Example
-
 Imagine two students searching for a book.
 Student A checks every book one by one.
 Student B goes directly to the correct shelf using the catalogue.
@@ -388,13 +385,10 @@ Worst Case.
 
 ```
 Best Case
-😊
 ↓
 Average Case
-🙂
 ↓
 Worst Case
-😓
 ```
 
 # Why Do Interviews Focus on Worst Case?
@@ -459,12 +453,11 @@ D. None
 6. Why do interviewers prefer Worst Case?
 
 #  Quick Revision
-
-✅ Big O → Mathematical representation of Time Complexity.
-✅ Best Case → Minimum Time.
-✅ Average Case → Normal Time.
-✅ Worst Case → Maximum Time.
-✅ Interviews mainly focus on Worst Case.
+* Big O → Mathematical representation of Time Complexity.
+* Best Case → Minimum Time.
+* Average Case → Normal Time.
+* Worst Case → Maximum Time.
+* Interviews mainly focus on Worst Case.
 
 #  Summary
 - Big O Notation measures algorithm efficiency.
@@ -472,7 +465,7 @@ D. None
 - Time Complexity has three cases: Best, Average and Worst.
 - Worst Case is the most important in coding interviews.
 
----
+# (Part-3)
 
 # Part 3: Common Time Complexities
 
@@ -483,205 +476,122 @@ In this section, we will learn the four most important time complexities asked i
 - O(n)
 - O(n log n)
 
----
-
-# 1️⃣ O(1) - Constant Time Complexity
-
-## 🇬🇧 English
-
+# 1️ O(1) - Constant Time Complexity
+##  English
 An algorithm takes the **same amount of time**, no matter how large the input size is.
-
 The execution time never changes.
 
----
-
 ## 🇮🇳 Hindi
-
 Chahe input me 10 elements ho ya 10 lakh elements, algorithm hamesha same time lega.
-
 Isliye ise **Constant Time Complexity** kehte hain.
 
----
-
-## 💡 Example
+##  Example
 
 Accessing an element of an array using its index.
-
 ```java
 int[] arr = {10,20,30,40,50};
-
 System.out.println(arr[2]);
 ```
-
-Output
-
+Output:
 ```
 30
 ```
-
 No matter how big the array is, accessing index 2 always takes almost the same time.
 
----
 
-## 📊 Diagram
+## Diagram
 
 ```
 Input Size
-
 10
 100
 1000
 100000
-
 ↓
-
 Time
-
 1 Step
 1 Step
 1 Step
 1 Step
 ```
-
 ---
 
-## 🎯 Real-Life Example
-
+##  Real-Life Example
 Imagine you know your friend's roll number.
-
 Teacher directly tells where your friend sits.
-
 No searching required.
 
----
+# 2️ O(log n) - Logarithmic Time Complexity
 
-# 2️⃣ O(log n) - Logarithmic Time Complexity
-
-## 🇬🇧 English
-
+##  English
 The algorithm reduces the search space by half in every step.
-
 This is much faster than checking every element.
 
----
-
 ## 🇮🇳 Hindi
-
 Har step me data aadha ho jata hai.
-
 Isliye algorithm bahut fast hota hai.
 
----
-
-## 🌍 Example
+##  Example
 
 Binary Search
-
 Suppose
-
 ```
 100 Numbers
 ```
 
 Step 1
-
 ↓
-
 50
-
 ↓
-
 25
-
 ↓
-
 12
-
 ↓
-
 6
-
 ↓
-
 3
-
 ↓
-
 1
-
 Only a few steps are needed.
 
----
-
-## 📊 Diagram
+##  Diagram
 
 ```
 100
-
 ↓
-
 50
-
 ↓
-
 25
-
 ↓
-
 12
-
 ↓
-
 6
-
 ↓
-
 3
-
 ↓
-
 1
 ```
 
----
-
-## 💡 Real-Life Example
-
+## Real-Life Example
 Dictionary me word search karna.
-
 Har page nahi dekhte.
-
 Beech se start karte hain.
 
----
-
-## 📌 Used In
-
+##  Used In
 ✔ Binary Search
-
 ✔ Balanced Trees
-
 ✔ Divide and Conquer
 
----
+# 3️ O(n) - Linear Time Complexity
 
-# 3️⃣ O(n) - Linear Time Complexity
-
-## 🇬🇧 English
-
+##  English
 The algorithm checks every element one by one.
-
 Time increases directly with input size.
 
----
-
 ## 🇮🇳 Hindi
-
 Jitna input badhega utna hi algorithm ka time badhega.
 
----
-
-## 💻 Java Example
+##  Java Example
 
 ```java
 int[] arr={10,20,30,40,50};
@@ -691,92 +601,52 @@ for(int i=0;i<arr.length;i++)
     System.out.println(arr[i]);
 }
 ```
-
 The loop visits every element once.
 
----
-
-## 📊 Diagram
-
+##  Diagram
 ```
 n = 5
-
 *****
-
 5 Steps
-
 --------------
-
 n = 100
-
 ************************
-
 100 Steps
 ```
 
----
-
-## 🌍 Real-Life Example
-
+## Real-Life Example
 Attendance checking.
-
 Teacher checks every student one by one.
 
----
+# 4️ O(n log n)
 
-# 4️⃣ O(n log n)
-
-## 🇬🇧 English
-
+##  English
 This complexity is better than O(n²).
-
 Many efficient sorting algorithms use O(n log n).
 
----
-
 ## 🇮🇳 Hindi
-
 Ye complexity Linear se thodi slow aur Quadratic se bahut fast hoti hai.
-
 Sorting algorithms me ye bahut common hai.
 
----
-
-## 📌 Examples
-
+##  Examples
 ✔ Merge Sort
-
 ✔ Heap Sort
-
 ✔ Quick Sort (Average Case)
 
----
-
-## 📊 Diagram
-
+## Diagram
 ```
 n
-
 ×
-
 log n
-
 ↓
-
 O(n log n)
 ```
 
----
-
-## 🌍 Real-Life Example
-
+##  Real-Life Example
 Imagine a teacher divides the class into groups and then checks every group efficiently.
-
 This saves a lot of time compared to checking randomly.
 
----
-
-# 📋 Comparison Table
+# Comparison Table
 
 | Complexity | Name | Speed | Example |
 |------------|------|-------|---------|
@@ -785,9 +655,7 @@ This saves a lot of time compared to checking randomly.
 | O(n) | Linear | ⭐⭐⭐ | Linear Search |
 | O(n log n) | Efficient | ⭐⭐⭐⭐ | Merge Sort |
 
----
-
-# 📈 Performance Graph
+# Performance Graph
 
 ```
 Time
@@ -804,9 +672,7 @@ Time
 │___________________________ Input Size
 ```
 
----
-
-# 🎯 Interview Questions
+#  Interview Questions
 
 1. What is O(1)?
 2. Give one example of O(log n).
@@ -814,113 +680,61 @@ Time
 4. Why is Linear Search O(n)?
 5. Which is better: O(n) or O(n log n)?
 
----
-
-# ❓ MCQs
+# MCQs
 
 ### Q1. Accessing an array element by index has:
-
 A. O(n)
-
 B. O(log n)
-
-✅ C. O(1)
-
+C. O(1)      (Correct)
 D. O(n²)
 
----
-
 ### Q2. Binary Search has:
-
 A. O(n)
-
 B. O(n²)
-
-✅ C. O(log n)
-
+C. O(log n)     (Correct)
 D. O(1)
 
----
-
 ### Q3. Merge Sort has:
-
 A. O(n²)
-
 B. O(1)
-
 C. O(n)
+D. O(n log n)    (Correct)
 
-✅ D. O(n log n)
-
----
-
-# ✍ Practice Questions
-
+#  Practice Questions
 1. Explain O(1) with an example.
 2. Explain O(log n) using Binary Search.
 3. Why is Linear Search O(n)?
 4. Compare O(1), O(log n), O(n) and O(n log n).
 5. Draw the Time Complexity graph.
 
----
+#  Quick Revision
+* O(1) → Constant
+* O(log n) → Binary Search
+* O(n) → Linear Search
+* O(n log n) → Merge Sort
 
-# 📝 Quick Revision
+# (part-4)
 
-✅ O(1) → Constant
-
-✅ O(log n) → Binary Search
-
-✅ O(n) → Linear Search
-
-✅ O(n log n) → Merge Sort
-
----
-
-# 🚀 Next Part
-
-➡️ Part 4: O(n²), O(2ⁿ), O(n!), Space Complexity and Time vs Space Complexity.
-
----
-
-
-
-
-
-# 📘 Part 4: O(n²), O(2ⁿ), O(n!), Space Complexity & Time vs Space Complexity
+# Part 4: O(n²), O(2ⁿ), O(n!), Space Complexity & Time vs Space Complexity
 
 In this part, we will learn:
+* O(n²)
+* O(2ⁿ)
+* O(n!)
+* Space Complexity
+* Time Complexity vs Space Complexity
 
-✅ O(n²)
+# 1️ O(n²) - Quadratic Time Complexity
 
-✅ O(2ⁿ)
-
-✅ O(n!)
-
-✅ Space Complexity
-
-✅ Time Complexity vs Space Complexity
-
----
-
-# 1️⃣ O(n²) - Quadratic Time Complexity
-
-## 🇬🇧 English
-
+##  English
 An algorithm has **O(n²)** time complexity when it uses **two nested loops**.
-
 As the input size increases, the number of operations increases very quickly.
 
----
-
 ## 🇮🇳 Hindi
-
 Jab kisi program me **nested loops (loop ke andar loop)** use hote hain, to uski Time Complexity aksar **O(n²)** hoti hai.
-
 Input double hone par operations lagbhag 4 times ho jate hain.
 
----
-
-## 💻 Java Example
+## Java Example
 
 ```java
 for(int i = 0; i < n; i++)
@@ -931,130 +745,78 @@ for(int i = 0; i < n; i++)
     }
 }
 ```
-
 Time Complexity
-
 ```
 O(n²)
 ```
 
----
-
-## 🌍 Real-Life Example
+## Real-Life Example
 
 Imagine every student shakes hands with every other student.
-
 If there are more students, handshakes increase very quickly.
 
----
-
-## 📌 Examples
-
+## Examples
 ✔ Bubble Sort
-
 ✔ Selection Sort
-
 ✔ Matrix Traversal
 
----
+# 2️ O(2ⁿ) - Exponential Time Complexity
 
-# 2️⃣ O(2ⁿ) - Exponential Time Complexity
-
-## 🇬🇧 English
-
+##  English
 In **O(2ⁿ)**, the number of operations doubles with each increase in input size.
-
 This becomes very slow for large inputs.
 
----
-
 ## 🇮🇳 Hindi
-
 Har naye input ke saath operations lagbhag double ho jate hain.
-
 Isliye ye large inputs ke liye practical nahi hoti.
 
----
 
-## 🌍 Example
+##  Example
 
 ```
 n = 1 → 2
-
 n = 2 → 4
-
 n = 3 → 8
-
 n = 4 → 16
-
 n = 5 → 32
 ```
-
----
-
-## 📌 Used In
-
+## Used In
 ✔ Recursive Problems
-
 ✔ Backtracking (Without Optimization)
 
----
+# 3️ O(n!) - Factorial Time Complexity
 
-# 3️⃣ O(n!) - Factorial Time Complexity
-
-## 🇬🇧 English
-
+## English
 This is one of the slowest time complexities.
-
 The algorithm tries every possible arrangement.
 
----
-
 ## 🇮🇳 Hindi
-
 Algorithm har possible arrangement ko check karta hai.
-
 Input thoda sa badhne par bhi operations bahut zyada ho jate hain.
 
----
-
-## 🌍 Example
-
+##  Example
 Finding all possible arrangements of people.
 
 ```
 3 People
-
 ABC
-
 ACB
-
 BAC
-
 BCA
-
 CAB
-
 CBA
 ```
-
 Total
-
 ```
 3! = 6
 ```
 
----
-
-## 📌 Used In
+## Used In
 
 ✔ Permutations
-
 ✔ Travelling Salesman Problem (Brute Force)
 
----
-
-# 📊 Complexity Comparison Table
+#  Complexity Comparison Table
 
 | Complexity | Name | Speed | Example |
 |------------|------|-------|---------|
@@ -1066,9 +828,7 @@ Total
 | O(2ⁿ) | Exponential | ⭐ | Recursion |
 | O(n!) | Factorial | ⭐ | Permutations |
 
----
-
-# 📈 Complexity Growth Graph
+# Complexity Growth Graph
 
 ```
 Time
@@ -1089,24 +849,14 @@ O(1)
 └──────────────────────────────► Input Size
 ```
 
----
-
-# 📦 What is Space Complexity?
-
-## 🇬🇧 English
-
+# What is Space Complexity?
+## English
 Space Complexity measures the amount of memory required by an algorithm during execution.
 
----
-
 ## 🇮🇳 Hindi
-
 Space Complexity batati hai ki algorithm ko execute hone ke liye kitni memory chahiye.
 
----
-
-## 💻 Java Example
-
+## Java Example
 ```java
 int a = 10;
 int b = 20;
@@ -1116,28 +866,18 @@ int sum = a + b;
 Only a few variables are used.
 
 Space Complexity
-
 ```
 O(1)
 ```
 
----
-
-# 🌍 Real-Life Example
-
+# Real-Life Example
 Imagine you are travelling.
-
-Small backpack 👜 → Less Space
-
-Big suitcase 🧳 → More Space
-
+Small backpack  → Less Space
+Big suitcase  → More Space
 Similarly,
-
 Less Memory → Better Space Complexity
 
----
-
-# ⚖ Time Complexity vs Space Complexity
+# Time Complexity vs Space Complexity
 
 | Time Complexity | Space Complexity |
 |-----------------|------------------|
@@ -1145,95 +885,54 @@ Less Memory → Better Space Complexity
 | Focuses on speed | Focuses on storage |
 | Written using Big O | Also written using Big O |
 
----
-
-# 💡 Which is More Important?
-
+#  Which is More Important?
 There is no single answer.
-
 Sometimes
-
-✅ Faster algorithm is preferred.
-
+* Faster algorithm is preferred.
 Sometimes
-
-✅ Lower memory usage is preferred.
-
+* Lower memory usage is preferred.
 It depends on the problem.
 
----
-
-# 🎤 Interview Questions
+# Interview Questions
 
 ## Basic
-
 1. What is O(n²)?
 2. Give one example of O(2ⁿ).
 3. What is O(n!)?
 4. What is Space Complexity?
 5. Difference between Time and Space Complexity.
 
----
-
 ## Intermediate
-
 1. Why is Bubble Sort O(n²)?
 2. Which is worse: O(2ⁿ) or O(n!)?
 3. Can an algorithm have good Time Complexity but poor Space Complexity?
 
----
-
-# ❓ MCQs
-
+#  MCQs
 ### Q1. Two nested loops usually have
-
 A. O(n)
-
-✅ B. O(n²)
-
+B. O(n²)    (Correct)
 C. O(log n)
-
 D. O(1)
-
----
 
 ### Q2. Bubble Sort worst-case complexity is
-
 A. O(log n)
-
 B. O(n)
-
-✅ C. O(n²)
-
+C. O(n²)   (Correct)
 D. O(1)
 
----
-
 ### Q3. Space Complexity measures
-
 A. CPU Speed
-
 B. Input Size
-
-✅ C. Memory Usage
-
+C. Memory Usage    (Correct)
 D. Internet Speed
 
----
-
 ### Q4. Which is the slowest?
-
 A. O(1)
-
 B. O(log n)
-
 C. O(n)
+D. O(n!)           (Correct)
 
-✅ D. O(n!)
-
----
-
-# ✍ Practice Questions
+# Practice Questions
 
 1. Explain O(n²) with an example.
 2. Why is O(2ⁿ) inefficient?
@@ -1241,24 +940,14 @@ C. O(n)
 4. Define Space Complexity.
 5. Compare Time Complexity and Space Complexity.
 
----
+# Quick Revision
+* O(n²) → Nested Loops
+* O(2ⁿ) → Exponential Growth
+* O(n!) → Factorial Growth
+* Space Complexity → Memory Usage
+* Time Complexity → Execution Time
 
-# 📝 Quick Revision
-
-✅ O(n²) → Nested Loops
-
-✅ O(2ⁿ) → Exponential Growth
-
-✅ O(n!) → Factorial Growth
-
-✅ Space Complexity → Memory Usage
-
-✅ Time Complexity → Execution Time
-
----
-
-# 📌 Summary
-
+#  Summary
 - O(n²) usually appears with nested loops.
 - O(2ⁿ) grows exponentially and becomes slow quickly.
 - O(n!) is one of the slowest complexities.
@@ -1267,24 +956,9 @@ C. O(n)
 
 ---
 
-# 🚀 Next Part
+# Part 5: (Overall Revision)
 
-➡️ Part 5: Interview Cheat Sheet, AKTU Exam Questions, MCQs, Practice Problems, One-Page Revision & Chapter Summary.
-
-
----
-
-# 📘 Part 5: Interview Cheat Sheet, AKTU Questions, MCQs, Practice & Final Revision
-
-Congratulations 🎉
-
-You have completed one of the most important DSA chapters.
-
-Now let's revise everything.
-
----
-
-# 🎯 One Page Cheat Sheet
+# One Page Sheet
 
 | Complexity | Name | Common Example |
 |------------|------|----------------|
@@ -1296,211 +970,92 @@ Now let's revise everything.
 | O(2ⁿ) | Exponential | Recursive Problems |
 | O(n!) | Factorial | Permutations |
 
----
 
-# 📊 Complexity Ranking (Best → Worst)
-
+# Complexity Ranking (Best → Worst)
 ```
-
 O(1)
-
 ↓
-
 O(log n)
-
 ↓
-
 O(n)
-
 ↓
-
 O(n log n)
-
 ↓
-
 O(n²)
-
 ↓
-
 O(2ⁿ)
-
 ↓
-
 O(n!)
-
 ```
 
-👉 The higher you go in this list, the better the algorithm.
+> The higher you go in this list, the better the algorithm.
 
----
 
-# 🧠 Memory Tricks
+#  Memory Tricks
 
 ## Trick 1
-
 Remember this order
-
 ```
-
 1
-
 ↓
-
 log n
-
 ↓
-
 n
-
 ↓
-
 n log n
-
 ↓
-
 n²
-
 ↓
-
 2ⁿ
-
 ↓
-
 n!
-
 ```
-
----
 
 ## Trick 2
-
 Fastest
-
-🏃 O(1)
+O(1)
 
 Slowest
-
-🐢 O(n!)
-
----
+O(n!)
 
 ## Trick 3
-
 Nested Loop
-
 ↓
-
 Always think
-
 ```
-
 O(n²)
-
 ```
-
----
 
 ## Trick 4
-
 Binary Search
-
 ↓
-
 Always remember
-
 ```
-
 O(log n)
-
 ```
 
----
-
-# 📚 AKTU Important Questions
-
-### ⭐ 2 Marks
-
-1. Define Time Complexity.
-
-2. What is Big O Notation?
-
-3. Define Space Complexity.
-
-4. Difference between Time and Space Complexity.
-
-5. Define Best Case.
-
-6. Define Worst Case.
-
----
-
-### ⭐ 5 Marks
-
-1. Explain Big O Notation with examples.
-
-2. Explain Best, Average and Worst Case.
-
-3. Explain O(1), O(log n), O(n) and O(n²).
-
-4. Explain Time Complexity with real-life examples.
-
-5. Compare different Time Complexities.
-
----
-
-### ⭐ 10 Marks
-
-1. Explain Time Complexity in detail with diagrams.
-
-2. Explain Big O Notation and different Time Complexities.
-
-3. Compare all common Time Complexities using examples.
-
----
-
-# 💼 Most Asked Interview Questions
+#  Most Asked Interview Questions
 
 ## Basic Level
-
 1. What is Time Complexity?
-
 2. Why do we use Big O?
-
 3. Difference between Time and Space Complexity?
-
 4. Why is Binary Search O(log n)?
-
 5. Why is Linear Search O(n)?
 
----
-
 ## Intermediate Level
-
 1. Explain O(n log n).
-
 2. Why is Merge Sort better than Bubble Sort?
-
 3. Which Time Complexity is best?
-
 4. Which Time Complexity is worst?
-
 5. Explain O(2ⁿ).
 
----
-
 ## Advanced Level
-
 1. How do you calculate Time Complexity?
-
 2. Can an algorithm have multiple Time Complexities?
-
 3. Why do interviews prefer Worst Case Complexity?
-
 4. Can Time Complexity be reduced?
-
 5. Is lower Time Complexity always better?
-
----
 
 # Final MCQs
 
@@ -1574,13 +1129,13 @@ O(n) → Linear Search
 O(n²) → Bubble Sort
 
 #  Quick Revision
-✅ Time Complexity → Growth of execution time
-✅ Space Complexity → Memory usage
-✅ Big O → Mathematical notation
-✅ Binary Search → O(log n)
-✅ Linear Search → O(n)
-✅ Merge Sort → O(n log n)
-✅ Bubble Sort → O(n²)
+* Time Complexity → Growth of execution time
+* Space Complexity → Memory usage
+* Big O → Mathematical notation
+* Binary Search → O(log n)
+* Linear Search → O(n)
+* Merge Sort → O(n log n)
+* Bubble Sort → O(n²)
 
 #  Chapter Summary
 
@@ -1604,8 +1159,4 @@ After completing this chapter, you have learned:
 Congratulations! 
 You have successfully completed **Chapter 3 - Time Complexity**.
 
----
-
-#  Next Chapter
-
- **Chapter 4: Space Complexity (Detailed) & Asymptotic Notations (Big O, Omega (Ω), Theta (Θ))**
+----
